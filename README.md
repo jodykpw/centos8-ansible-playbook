@@ -10,12 +10,12 @@ Based on [Ansible Best Practices: Sample directory layout](https://docs.ansible.
 1. `git clone` this repository.
 2. Go to the cloned folder.
 3. Select a playbook (see [`Available playbooks`](https://github.com/truewebartisans/useful-playbooks#-available-playbooks) section).
-4. Run `<playbook_name>` -i `<inventory_name>` --ask-become
+4. Run `<playbook_name>` -i `<inventory_name>`
 
 Example
 
 ```console
-ansible-playbook new-localhost-server.yml -i dev.ini --ask-become
+ansible-playbook init-localhost-server.yml -i dev.ini
 ```
 
 ## 📚 Available playbooks
