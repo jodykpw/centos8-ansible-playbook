@@ -1,0 +1,3 @@
+[submodule "roles/ansible-role-swap"]
+	path = roles/ansible-role-swap
+	url = https://github.com/jodykpw/ansible-role-swap.git
