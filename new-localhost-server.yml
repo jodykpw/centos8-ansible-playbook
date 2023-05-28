@@ -1,0 +1,9 @@
+- hosts: all
+  become: true
+  roles:
+    - ansible-role-update
+    - ansible-role-firewalld
+    - ansible-role-epel
+    - ansible-role-utilities
+    - ansible-role-development-tools
+    - ansible-role-swap
