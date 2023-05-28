@@ -1,0 +1,52 @@
+---
+- name: "Exclude Specific Packages from YUM & DNF Update"
+  lineinfile:
+    state: "present"
+    dest: /etc/yum.conf
+    line: "{{ yum_dnf_exclude }}"
+    regexp: "^exclude"
+    insertafter: EOF
+  when: exclude_enabled
+
+- name: Current exclude Specific Packages from YUM & DNF Update
+  ansible.builtin.command:
+    cmd: grep "exclude" /etc/yum.conf
+  register: exclude_result
+  when: exclude_enabled
+- name: Current exclude Specific Packages from YUM & DNF Update
+  ansible.builtin.debug:
+    msg: '{{ exclude_result }}'
+  when: exclude_enabled
+
+- name: Check packages to update
+  dnf:
+    list: updates
+  register: packages
+- name: Show packages to update
+  debug:
+    msg: >-
+      {%- set output=[] -%}
+      {%- for p in packages.results -%}
+      {{ output.append('%-40s' % (p.name ~ '-' ~ p.version) ~ ' | repo: ' ~ p.repo) }}
+      {%- endfor -%}
+      {{ output }}
+
+- name: Update all software (dnf)
+  ansible.builtin.dnf:
+    name: "*"
+    state: "{{ update_state }}"
+    update_cache: yes
+
+- name: List latest updated packages
+  ansible.builtin.shell: rpm -qa --last | grep "$(date +%a\ %d\ %b\ %Y)" |cut -f 1 -d " "
+  register: list_update_result
+- name: List latest updated packages
+  debug: msg="{{ list_update_result.stdout_lines }}"
+
+- name: Clean all
+  ansible.builtin.command:
+    cmd: dnf clean all
+  register: clean_all_result
+- name: Clean all
+  ansible.builtin.debug:
+    msg: '{{ clean_all_result }}'

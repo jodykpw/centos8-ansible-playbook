@@ -1,0 +1,14 @@
+---
+- name: Reboot host(s)
+  ansible.builtin.reboot:
+    msg: "Reboot by Ansible"
+    pre_reboot_delay: "{{ pre_reboot_delay }}"
+    post_reboot_delay: "{{ post_reboot_delay }}"
+
+- name: Uptime
+  ansible.builtin.command:
+    cmd: uptime
+  register: uptime_result
+- name: Uptime
+  ansible.builtin.debug:
+    msg: '{{ uptime_result }}'

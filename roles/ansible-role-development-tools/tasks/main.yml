@@ -1,0 +1,10 @@
+---
+- name: Install Development Tools
+  ansible.builtin.command:
+    cmd: dnf group -y install "Development Tools"
+  register: devtools_result
+  when: install_development_tools
+- name: Install Development Tools
+  ansible.builtin.debug:
+    msg: '{{ devtools_result }}'
+  when: install_development_tools

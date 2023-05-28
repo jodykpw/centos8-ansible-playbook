@@ -1,0 +1,8 @@
+---
+install_system_utilities: true
+install_tar: true
+install_zip: true
+install_vim: true
+install_nano: true
+install_htop: true
+install_nfs_utils: false

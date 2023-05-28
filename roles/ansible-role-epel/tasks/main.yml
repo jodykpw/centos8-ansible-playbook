@@ -1,0 +1,21 @@
+---
+- name: Install epel gpg key
+  ansible.builtin.rpm_key:
+    key: "{{ epel_gpg_key }}"
+    state: present
+
+- name: Enabling the EPEL8 repository on RHEL 8 / CentOS 8
+  ansible.builtin.command:
+    cmd: dnf -y install "{{ epel_url }}"
+  register: dnf_epel8_result
+- name: Enabling the EPEL8 repository on RHEL 8 / CentOS 8
+  ansible.builtin.debug:
+    msg: '{{ dnf_epel8_result }}'
+
+- name: Verify EPEL repository has been enabled.
+  ansible.builtin.command:
+    cmd: rpm -ql epel-release
+  register: verify_epel8_result
+- name: Verify EPEL repository has been enabled.
+  ansible.builtin.debug:
+    msg: '{{ verify_epel8_result }}'

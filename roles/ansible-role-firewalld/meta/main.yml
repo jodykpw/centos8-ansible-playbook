@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Jody WAN
+  description: An Ansible role that allows for the installation or disabling of the Firewalld firewall management tool on CentOS-based systems.
+  linkedin: https://www.linkedin.com/in/jodywan/
+  website: https://www.jodywan.com
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.12
+  platforms:
+  - name: EL
+    versions:
+    - 8
+  galaxy_tags:
+    - system
+    - server
+    - firewalld
+    - security
+    - configuration

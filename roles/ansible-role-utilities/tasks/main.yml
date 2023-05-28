@@ -1,0 +1,70 @@
+---
+- name: Install System Utilities
+  ansible.builtin.command:
+    cmd: dnf -y install wget curl net-tools lsof bash-completion bind-utils tree traceroute psmisc yum-utils
+  register: system_utilities_result
+  when: install_system_utilities
+- name: Install System Utilities
+  ansible.builtin.debug:
+    msg: '{{ system_utilities_result }}'
+  when: install_system_utilities
+
+- name: Install Tar
+  ansible.builtin.command:
+    cmd: dnf -y install tar
+  register: tar_result
+  when: install_tar
+- name: Install Tar
+  ansible.builtin.debug:
+    msg: '{{ tar_result }}'
+  when: install_tar
+
+- name: Install Zip
+  ansible.builtin.command:
+    cmd: dnf -y install zip
+  register: zip_result
+  when: install_zip
+- name: Install Zip
+  ansible.builtin.debug:
+    msg: '{{ zip_result }}'
+  when: install_zip
+
+- name: Install Vim
+  ansible.builtin.command:
+    cmd: dnf -y install vim
+  register: vim_result
+  when: install_vim
+- name: Install Vim
+  ansible.builtin.debug:
+    msg: '{{ vim_result }}'
+  when: install_vim
+
+- name: Install nano
+  ansible.builtin.command:
+    cmd: dnf -y install nano
+  register: nano_result
+  when: install_nano
+- name: Install nano
+  ansible.builtin.debug:
+    msg: '{{ nano_result }}'
+  when: install_nano
+
+- name: Install Htop
+  ansible.builtin.command:
+    cmd: dnf -y install htop
+  register: htop_result
+  when: install_htop
+- name: Install Htop
+  ansible.builtin.debug:
+    msg: '{{ htop_result }}'
+  when: install_htop
+
+- name: Install NFS Client
+  ansible.builtin.command:
+    cmd: dnf -y install nfs-utils
+  register: nfs_client_result
+  when: install_htop
+- name: Install NFS Client
+  ansible.builtin.debug:
+    msg: '{{ nfs_client_result }}'
+  when: install_nfs_utils

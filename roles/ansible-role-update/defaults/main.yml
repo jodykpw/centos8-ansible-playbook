@@ -1,0 +1,4 @@
+---
+exclude_enabled: false
+yum_dnf_exclude: 'exclude=kernel*, docker*, kube*'
+update_state: 'latest'

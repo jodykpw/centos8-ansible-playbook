@@ -1,0 +1,56 @@
+---
+- name: Install firewalld
+  ansible.builtin.command:
+    cmd: dnf -y install firewalld
+  register: dnf_firewalld_result
+- name: Install firewalld
+  ansible.builtin.debug:
+    msg: '{{ dnf_firewalld_result }}'
+
+- name: Stop firwalld service
+  ansible.builtin.command:
+    cmd: systemctl stop firewalld.service
+  register: stop_firewalld_result
+  when: not enable_firewalld
+- name: Stop firwalld service
+  ansible.builtin.debug:
+    msg: '{{ stop_firewalld_result }}'
+  when: not enable_firewalld
+
+- name: Disable firwalld service
+  ansible.builtin.command:
+    cmd: systemctl disable firewalld.service
+  register: disable_firewalld_result
+  when: not enable_firewalld
+- name: Disable firwalld service
+  ansible.builtin.debug:
+    msg: '{{ disable_firewalld_result }}'
+  when: not enable_firewalld
+
+- name: Start firwalld service
+  ansible.builtin.command:
+    cmd: systemctl start firewalld.service
+  register: start_firewalld_result
+  when: enable_firewalld
+- name: Start firwalld service
+  ansible.builtin.debug:
+    msg: '{{ start_firewalld_result }}'
+  when: enable_firewalld
+
+- name: Enable firwalld service
+  ansible.builtin.command:
+    cmd: systemctl enable firewalld.service
+  register: enable_firewalld_result
+  when: enable_firewalld
+- name: Enable firwalld service
+  ansible.builtin.debug:
+    msg: '{{ enable_firewalld_result }}'
+  when: enable_firewalld
+
+- name: Status firwalld service
+  ansible.builtin.command:
+    cmd: systemctl status firewalld.service
+  register: status_firewalld_result
+- name: Status firwalld service
+  ansible.builtin.debug:
+    msg: '{{ status_firewalld_result }}'
