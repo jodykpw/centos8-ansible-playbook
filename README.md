@@ -7,7 +7,7 @@ Based on [Ansible Best Practices: Sample directory layout](https://docs.ansible.
 
 ## 🚀 Quick start
 
-1. `git clone` this repository.
+1. `git clone --recursive` this repository.
 2. Go to the cloned folder.
 3. Select a playbook (see [`Available playbooks`](https://github.com/truewebartisans/useful-playbooks#-available-playbooks) section).
 4. Run `<playbook_name>` -i `<inventory_name>`
