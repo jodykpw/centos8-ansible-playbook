@@ -24,6 +24,8 @@ ansible-playbook init-localhost-server.yml -i dev.ini
 
 - 📖 `site.yml` For auto configure a fresh remote virtual server.
 
+- 📖 `migrate-home-directory.yml` To move the home directory to a new partition on CentOS 8, please note that this playbook cannot be executed while the /home folder is in use.
+
 ## ⚠️ License
 
 MIT / BSD
