@@ -1,7 +1,7 @@
 ---
 - name: Install System Utilities
   ansible.builtin.command:
-    cmd: dnf -y install wget curl net-tools lsof bash-completion bind-utils tree traceroute psmisc yum-utils
+    cmd: dnf -y install wget curl net-tools lsof bash-completion bind-utils tree traceroute psmisc yum-utils lvm2
   register: system_utilities_result
   when: install_system_utilities
 - name: Install System Utilities

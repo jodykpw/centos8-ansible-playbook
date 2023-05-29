@@ -25,6 +25,7 @@ Boolean option used to install the system utilities on target hosts
 - `traceroute`: is a command-line tool used to trace the network path between a source and destination, revealing the intermediate routers or hops along the way, aiding in network troubleshooting and diagnosing connectivity problems.
 - `psmisc`: is a package containing command-line utilities for managing and inspecting running processes on a Linux system, providing functionality for process monitoring, termination, and administrative tasks.
 - `yum-utils`:  is a package containing command-line utilities and plugins that enhance the functionality of the YUM package manager, providing additional tools for package management, dependency resolution, repository management, and package analysis.
+- `lvm2`:  The lvm2 package includes various command-line tools, libraries, and daemons that enable the creation, resizing, and management of logical volumes.
 
 ```
 install_system_utilities: true
