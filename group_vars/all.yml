@@ -33,3 +33,7 @@ vfs_cache_pressure_value: 50
 # Ansible Role: Reboot
 pre_reboot_delay: 5
 post_reboot_delay: 30
+
+# Ansible Role: Move Home Directory to New Partition
+parted_device: /dev/sdb
+parted_fs_type: xfs
