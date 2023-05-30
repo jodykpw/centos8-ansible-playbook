@@ -9,8 +9,9 @@ Based on [Ansible Best Practices: Sample directory layout](https://docs.ansible.
 
 1. `git clone --recursive` this repository.
 2. Go to the cloned folder.
-3. Select a playbook (see [`Available playbooks`](https://github.com/truewebartisans/useful-playbooks#-available-playbooks) section).
-4. Run `<playbook_name>` -i `<inventory_name>`
+3. Editing the group_vars files, you can customize variables specific to different groups of hosts in your Ansible inventory. These variables will be applied when running playbooks or tasks that target the corresponding group of hosts.
+4. Select a playbook (see [`Available playbooks`](https://github.com/truewebartisans/useful-playbooks#-available-playbooks) section).
+5. Run `<playbook_name>` -i `<inventory_name>`
 
 Example
 
