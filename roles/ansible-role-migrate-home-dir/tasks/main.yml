@@ -11,14 +11,14 @@
   community.general.parted:
     device: "{{ parted_device }}"
     number: 1
-    state: mounted
+    state: present
     fs_type: "{{ parted_fs_type }}"
 
 - name: Create a filesystem on '"{{ parted_device }}1"
   community.general.filesystem:
     fstype: "{{ parted_fs_type }}"
     dev: "{{ parted_device }}1"
-    state: mounted
+    state: present
     
 - name: Create a temporary mount point for new disk
   file:
