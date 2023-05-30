@@ -25,11 +25,12 @@ ansible-playbook init-localhost-server.yml -i dev.ini
 
 - 📖 `site.yml` For auto configure a fresh remote virtual server.
 
-- 📖 `migrate-home-directory.yml` To move the home directory to a new partition on CentOS 8, please note that this playbook cannot be executed while the /home folder is in use.
+- 📖 `migrate-home-directory.yml` For move the home directory to a new partition on CentOS 8, for the requirements and dependencies please refer to ansible-role-migrate-home-dir README.md 
+
+- 📖 `docker.yml` Integrated with the [geerlingguy/ansible-role-docker](https://github.com/geerlingguy/ansible-role-docker).
 
 ## 📑 To Do
 
-- [] `docker`: Contains tasks for installing and configuring Docker.
 - [] `rsnapshot`: Contains tasks for configuring Rsnapshot backups.
 
 Or more...

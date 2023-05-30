@@ -8,6 +8,8 @@ Requirements
 
 - This role assumes you have a new disk attached to the system.
 
+- This role cannot be executed while the /home folder.
+
 Role Variables
 --------------
 The block device (disk) where to operate.
