@@ -27,6 +27,13 @@ ansible-playbook init-localhost-server.yml -i dev.ini
 
 - 📖 `migrate-home-directory.yml` To move the home directory to a new partition on CentOS 8, please note that this playbook cannot be executed while the /home folder is in use.
 
+## 📑 To Do
+
+- [] `docker`: Contains tasks for installing and configuring Docker.
+- [] `rsnapshot`: Contains tasks for configuring Rsnapshot backups.
+
+Or more...
+
 ## 📄 License
 
 MIT / BSD
