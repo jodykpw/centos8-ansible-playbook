@@ -1,0 +1,8 @@
+- hosts: localhost
+  become: true
+  vars_files:
+    - group_vars/mount.yml
+    - group_vars/rsnapshot.yml
+  roles:
+    - ansible-role-mount
+    - ansible-role-rsnapshot

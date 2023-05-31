@@ -29,9 +29,11 @@ ansible-playbook init-localhost-server.yml -i dev.ini
 
 - 📖 `docker.yml` Integrated with the [geerlingguy/ansible-role-docker](https://github.com/geerlingguy/ansible-role-docker).
 
+- 📖 `rsnapshot.yml` Is used to configure and manage the rsnapshot backup.
+
 ## 📑 To Do
 
-- [] `rsnapshot`: Contains tasks for configuring Rsnapshot backups.
+- [] `podman`: Ansible Role for Podman Installation.
 
 Or more...
 

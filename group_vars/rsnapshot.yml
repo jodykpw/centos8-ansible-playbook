@@ -1,0 +1,78 @@
+---
+rsnapshot_config_template: "rsnapshot.conf.j2"
+
+# rsnapshot options
+rsnapshot_config_file: /etc/rsnapshot.conf
+rsnapshot_config_version: 1.2
+rsnapshot_config_snapshot_root: /data/nas/devbox-1/hdd/rsnapshots/
+rsnapshot_config_no_create_root: 1
+rsnapshot_config_cmd_cp: /bin/cp
+rsnapshot_config_cmd_rm: /bin/rm
+rsnapshot_config_cmd_rsync: /usr/bin/rsync
+rsnapshot_config_cmd_logger: /usr/bin/logger
+rsnapshot_config_cmd_du: /usr/bin/du
+rsnapshot_config_cmd_rsnapshot_diff: /usr/bin/rsnapshot-diff
+rsnapshot_config_cmd_preexec:
+rsnapshot_config_cmd_postexec:
+rsnapshot_config_intervals:
+    - name: hourly
+      value: 6
+    - name: daily
+      value: 7
+    - name: weekly
+      value: 4
+    - name: monthly
+      value: 3
+rsnapshot_config_verbose: 2
+rsnapshot_config_loglevel: 3
+rsnapshot_config_logfile_folder: /var/log/rsnapshot/
+rsnapshot_config_logfile: rsnapshot.log
+rsnapshot_config_lockfile_folder: /var/run/rsnapshot/
+rsnapshot_config_lockfile: rsnapshot.pid
+rsnapshot_config_stop_on_stale_lockfile: 0
+rsnapshot_config_rsync_short_args:
+rsnapshot_config_rsync_long_args:
+rsnapshot_config_ssh_args:
+rsnapshot_config_du_args:
+rsnapshot_config_one_fs:
+rsnapshot_config_include: []
+rsnapshot_config_exclude: []
+rsnapshot_config_include_file:
+rsnapshot_config_exclude_file:
+rsnapshot_config_link_dest: 1
+rsnapshot_config_sync_first: 0
+rsnapshot_config_use_lazy_deletes: 0
+rsnapshot_config_rsync_numtries: 0
+rsnapshot_config_backup:
+    - name: localhost
+      points:
+          - [backup, /root/, localhost/]
+          - [backup, /home/, localhost/]
+          - [backup, /var/lib/docker/volumes/, localhost/]
+
+# rsnapshot cronjob
+rsnapshot_cron_hourly_minute: "*"
+rsnapshot_cron_hourly_hour: "*/4"
+rsnapshot_cron_hourly_day: "*"
+rsnapshot_cron_hourly_month: "*"
+rsnapshot_cron_hourly_weekday: "*"
+
+rsnapshot_cron_daily_minute: "30"
+rsnapshot_cron_daily_hour: "3"
+rsnapshot_cron_daily_day: "*"
+rsnapshot_cron_daily_month: "*"
+rsnapshot_cron_daily_weekday: "*"
+
+rsnapshot_cron_weekly_minute: "0"
+rsnapshot_cron_weekly_hour: "3"
+rsnapshot_cron_weekly_day: "*"
+rsnapshot_cron_weekly_month: "*"
+rsnapshot_cron_weekly_weekday: "1"
+
+rsnapshot_cron_monthly_minute: "30"
+rsnapshot_cron_monthly_hour: "2"
+rsnapshot_cron_monthly_day: "1"
+rsnapshot_cron_monthly_month: "*"
+rsnapshot_cron_monthly_weekday: "*"
+
+rsnapshot_start_hourly_backup: true
