@@ -22,16 +22,12 @@ If specified and the partition does not exist, will set filesystem type to given
 Dependencies
 ------------
 
-This role depends on the following Ansible Galaxy collections:
-
-- `community.general`: Provides a wide range of additional modules and plugins for Ansible.
-- `ansible.posix`: Offers modules specifically designed for POSIX-compliant systems, including the `mount` module.
+[ansible-galaxy-requirements.yml](ansible-galaxy-requirements.yml)
 
 You can install these collections using the following commands:
 
 ```shell
-ansible-galaxy collection install community.general
-ansible-galaxy collection install ansible.posix
+ansible-galaxy role install -r ansible-galaxy-requirements.yml
 ```
 
 Example Playbook

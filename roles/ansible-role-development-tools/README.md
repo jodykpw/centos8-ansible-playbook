@@ -41,7 +41,12 @@ These tools include core development tools such as
 Requirements
 ------------
 
-None.
+This Ansible role has been developed and thoroughly tested with Ansible Core version 2.15.0.
+
+This role was designed for:
+
+- CentOS 8 Stream
+- RHEL 8
 
 Role Variables
 --------------

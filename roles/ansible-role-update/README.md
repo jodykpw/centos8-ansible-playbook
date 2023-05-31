@@ -8,7 +8,12 @@ This role provides a streamlined and automated way to perform system updates on 
 Requirements
 ------------
 
-None.
+This Ansible role has been developed and thoroughly tested with Ansible Core version 2.15.0.
+
+This role was designed for:
+
+- CentOS 8 Stream
+- RHEL 8
 
 Role Variables
 --------------
