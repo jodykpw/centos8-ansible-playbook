@@ -1,3 +1,0 @@
----
-parted_device: /dev/sdb
-parted_fs_type: xfs

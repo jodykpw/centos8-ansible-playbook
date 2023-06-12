@@ -1,6 +1,0 @@
-- hosts: all
-  become: true
-  vars_files:
-    - group_vars/migrate-home-dir.yml
-  roles:
-    - ansible-role-migrate-home-dir
