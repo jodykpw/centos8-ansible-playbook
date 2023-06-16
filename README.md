@@ -1,6 +1,6 @@
-# 📕 CENTOS 8 Cloud-Init Playbook
+# 📕 CENTOS 8 Playbook
 
-An Ansible playbook designed to set up a development environment on CentOS 8 using cloud-init. This playbook aims to automate the provisioning of a CentOS 8 virtual machine or cloud instance, specifically tailored for development purposes. It includes tasks to install common development tools and perform other necessary configurations to create a functional and ready-to-use development environment.
+An Ansible playbook designed to set up a development environment on CentOS 8. This playbook aims to automate the provisioning of a CentOS 8 virtual machine or cloud instance, specifically tailored for development purposes. It includes tasks to install common development tools and perform other necessary configurations to create a functional and ready-to-use development environment.
 
 ## 🗂️ The files structure is organised this way:
 Based on [Ansible Best Practices: Sample directory layout](https://docs.ansible.com/ansible/latest/tips_tricks/sample_setup.html#sample-directory-layout)
