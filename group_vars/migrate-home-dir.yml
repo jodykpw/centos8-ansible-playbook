@@ -1,3 +1,0 @@
-# Ansible Role: Move Home Directory to New Partition
-parted_device: /dev/sdb
-parted_fs_type: xfs
