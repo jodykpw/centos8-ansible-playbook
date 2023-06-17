@@ -1,4 +1,4 @@
-# 📕 CENTOS 8 Playbook
+# 📕 CENTOS 8 Ansible Playbook
 
 An Ansible playbook designed to set up a development environment on CentOS 8. This playbook aims to automate the provisioning of a CentOS 8 virtual machine or cloud instance, specifically tailored for development purposes. It includes tasks to install common development tools and perform other necessary configurations to create a functional and ready-to-use development environment.
 
