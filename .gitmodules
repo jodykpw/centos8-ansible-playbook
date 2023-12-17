@@ -7,3 +7,6 @@
 [submodule "roles/ansible-role-mount"]
 	path = roles/ansible-role-mount
 	url = https://github.com/jodykpw/ansible-role-mount.git
+[submodule "roles/ansible-role-rsnapshot"]
+	path = roles/ansible-role-rsnapshot
+	url = https://github.com/jodykpw/ansible-role-rsnapshot.git
