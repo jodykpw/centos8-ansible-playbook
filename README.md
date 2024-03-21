@@ -21,11 +21,9 @@ ansible-playbook init-localhost-server.yml -i hosts.ini
 
 ## 📚 Available playbooks
 
-- 📖 `localhost.yml` For auto configure a fresh localhost virtual server, one limitation of this playbook is that it requires a manual reboot after execution.
+- 📖 `init-localhost-server.yml` Is an Ansible playbook tailored for deploying configurations and initializing services on the local machine itself. 
 
-- 📖 `site.yml` For auto configure a fresh remote virtual server.
-
-- 📖 `migrate-home-directory.yml` For move the home directory to a new partition on CentOS 8, for the requirements and dependencies please refer to ansible-role-migrate-home-dir README.md 
+- 📖 `init-remote-server.yml` Is an Ansible playbook designed for remote server initialization and configuration. 
 
 - 📖 `docker.yml` Integrated with the [geerlingguy/ansible-role-docker](https://github.com/geerlingguy/ansible-role-docker).
 
